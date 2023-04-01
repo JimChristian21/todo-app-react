@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ListItem from "./ListItem";
 
 export default function Todo() {
 
@@ -19,12 +20,20 @@ export default function Todo() {
         console.log(todoList);
     }
 
+    const todos = todoList.map((item, index) => {
+        return (
+            <ListItem key={index} name={item}/>
+        )
+    });
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" value={todo}/>
                 <button type="submit">Add</button>
             </form>
+
+            {todos}
         </div>
     )
 }
