@@ -3,9 +3,9 @@ import Todo from "./Todo";
 const TodoList = ({ todoList }) => {
    
     return (
-        todoList.map((task, index) => {
+        todoList.map((task) => {
             return (
-              <Todo key={index} name={task}/>
+              <Todo key={task.id} name={task.name}/>
             );
         })
     );
