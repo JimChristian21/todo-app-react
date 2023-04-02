@@ -4,6 +4,7 @@ import Todo from "./components/Todo";
 import ListItem from "./components/ListItem";
 import InlineComponent from "./components/InlineComponent";
 import StylesheetComponent from "./components/StylesheetComponent";
+import ModuleComponent from "./components/ModuleComponent";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Todo/>
       <InlineComponent/>
       <StylesheetComponent/>
+      <ModuleComponent/>
     </div>
   );
 }
